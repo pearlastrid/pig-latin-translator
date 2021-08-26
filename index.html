@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pig Latin Translator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Pearl Lin">
+        <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet">
+        <script async src="translate.js"></script>
+    </head>
+    <body>
+        <div class="banner">
+            <h1 class="title">Pig Latin Translator</h1>
+        </div>
+            <h4 class="author">By: Pearl Lin</h4>
+        <div class="introduction">
+            <!--basic introduction-->
+            <p>Pig Latin is a language game in which English words are altered, usually by moving consonants
+                to the end of the word and adding "ay". It also happens to be a 
+                <a href="https://en.wikipedia.org/wiki/Apache_Pig" target="_blank">programming language.</a> The 
+                rules of Pig Latin may vary slightly depending on where you look, but the guidelines below come from 
+                <a href="https://web.ics.purdue.edu/~morelanj/RAO/prepare2.html" target="_blank">this source.</a>
+            </p>
+        </div>
+        <hr id="introhr">
+        <div class="rules">
+            <!--basic rules-->
+            <h2>Pig Latin Rules</h2>
+            <p>1. If a word starts with a consonant and a vowel, move the first letter of the word 
+            to the end and add "ay".</p>
+            <br>
+            <p>2. If a word starts with 2 consonants, move the consonants to the end of the word and 
+            add "ay".</p>
+            <br>
+            <p>3. If a word starts with a vowel, add "way" to the end of the word.</p>
+            <br>
+        </div>
+        <hr>
+        <div class="englishInput">
+            <!--receive english input from user with a <textarea> element-->
+            <form>
+                <label for="textinput"><h2>English</h2></label>
+                <label for="textinput"><p>Type some English text in the field below, and hit translate!</p></label>
+                <br>
+                <textarea id="textInput" name="textinput" cols="70" rows="7"></textarea>
+                <br>
+                <!--button executes translateToPigLatin() in translate.js on click-->
+                <input type="button" id="button" value="Translate" onclick="translateToPigLatin()">
+            </form>
+        </div>
+        <hr>
+        <div class="piglatinOutput">
+            <!--Translated Pig Latin output is deposited here-->
+            <h2>Pig Latin</h2>
+            <p>Your text in Pig Latin . . .</p>
+            <br>
+            <p id="pigLatinOutput"></p>
+        </div>
+
+    </body>
+</html>
